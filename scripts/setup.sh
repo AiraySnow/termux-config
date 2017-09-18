@@ -2,7 +2,7 @@
 
 echo "This script sets up the Termux App."
 
-masterzip_url="https://github.com/alexs77/termux-config/archive/master.zip"
+masterzip_url="https://github.com/AiraySnow/termux-config/archive/master.zip"
 masterzip_file="$HOME/tmp/termux-config-master.zip"
 masterzip_dir="$HOME/tmp/termux-config"
 master_dir="$masterzip_dir/termux-config-master"
@@ -19,10 +19,11 @@ busybox unzip -d "$masterzip_dir" "$masterzip_file"
 packages="`busybox sed 's, -.*,,' "$package_file"`"
 
 apt install -y $packages
-
+bash $master_dir/gcc.sh
 cp -rp "$master_dir/data/HOME/." "$HOME"
 rm -f "$HOME/.vimrc"
 ln -s ".vim/.vimrc" "$HOME/.vimrc"
+ccache -m 5G
 
 exit $?
 
