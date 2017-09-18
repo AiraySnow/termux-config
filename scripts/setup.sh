@@ -19,11 +19,11 @@ busybox unzip -d "$masterzip_dir" "$masterzip_file"
 packages="`busybox sed 's, -.*,,' "$package_file"`"
 
 apt install -y $packages
-bash $master_dir/gcc.sh
+bash $master_dir/data/gcc.sh
 cp -rp "$master_dir/data/HOME/." "$HOME"
 rm -f "$HOME/.vimrc"
 ln -s ".vim/.vimrc" "$HOME/.vimrc"
-ccache -m 5G
+ccache -M 5G
 
 exit $?
 
