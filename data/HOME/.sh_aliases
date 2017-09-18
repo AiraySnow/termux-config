@@ -4,9 +4,9 @@
 # enable color support of ls and also add handy aliases
 if [ -x $PREFIX/bin/dircolors ]; then
   test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-  alias ls='ls --color=auto --format=-1'
-  alias dir='dir --color=auto' --format=-1'
-  alias vdir='vdir --color=auto' --format=-1'
+  alias ls='ls --color=auto  -1'
+  alias dir='dir --color=auto -1'
+  alias vdir='vdir --color=auto  -1'
 
   alias grep='grep --color=auto'
   alias fgrep='fgrep --color=auto'
@@ -14,18 +14,7 @@ if [ -x $PREFIX/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+alias ll='ls -alF -1'
+alias la='ls -A -1'
+alias l='ls -CF -1'
 
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-#alias android-connect="mtpfs -o allow_other /media/GalaxyNexus"
-#alias android-disconnect="fusermount -u /media/GalaxyNexus"
-
-alias android-connect="adb forward tcp:8888 tcp:8888 && mount '/data/$HOME/Arbeitsfläche/GalaxyNexus'"
-alias android-disconnect="fusermount -u /media/GalaxyNexus"
-
-# EOF
