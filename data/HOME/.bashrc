@@ -7,8 +7,7 @@ case $- in
   *i*) ;;
   *) return;;
 esac
-#Termux environment
-$PREFIX=/data/data/com.termux/files
+
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
 HISTCONTROL=ignoredups:ignorespace
@@ -47,7 +46,7 @@ esac
 force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
-  if [ -x $PREFIX/usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+  if [ -x $PREFIX/bin/tput ] && tput setaf 1 >&/dev/null; then
 	# We have color support; assume it's compliant with Ecma-48
 	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
 	# a case would tend to support setf rather than setaf.)
@@ -86,8 +85,8 @@ fi
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if ! shopt -oq posix; then
-  if [ -f $PREFIX/usr/share/bash-completion/bash_completion ]; then
-    . $PREFIX/usr/share/bash-completion/bash_completion
+  if [ -f $PREFIX/share/bash-completion/bash_completion ]; then
+    . $PREFIX/share/bash-completion/bash_completion
   elif [ -f $PREFIX/etc/bash_completion ]; then
     . $PREFIX/etc/bash_completion
   fi

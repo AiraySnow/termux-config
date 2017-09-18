@@ -2,11 +2,11 @@
 # used shell (zsh, bash, ...)
 
 # enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
+if [ -x $PREFIX/bin/dircolors ]; then
   test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-  alias ls='ls --color=auto'
-  alias dir='dir --color=auto'
-  alias vdir='vdir --color=auto'
+  alias ls='ls --color=auto --format=-1'
+  alias dir='dir --color=auto' --format=-1'
+  alias vdir='vdir --color=auto' --format=-1'
 
   alias grep='grep --color=auto'
   alias fgrep='fgrep --color=auto'
