@@ -3,6 +3,9 @@
 autoload -Uz promptinit
 promptinit
 
+autoload -Uz bashcompinit
+bashcompinit
+
 case "$HOST" in
   u*)
     # Special case

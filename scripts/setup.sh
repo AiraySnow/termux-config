@@ -24,7 +24,7 @@ cp -rp "$master_dir/data/HOME/." "$HOME"
 rm -f "$HOME/.vimrc"
 ln -s ".vim/.vimrc" "$HOME/.vimrc"
 ccache -M 5G
-echo -e 'deb [trusted=yes arch=all] https://Auxilus.github.io/files termux extras\ndeb [trusted=yes arch=all] http://cocodevienne.gitlab.io/aptpackages/termuxpackages termux extras\ndeb [trusted=yes arch=all] https://sdrausty.github.io/repo termux extras' >> $PREFIX/etc/apt/sources.list
+echo -e 'deb [trusted=yes arch=all] https://sdrausty.github.io/repo termux extras' >> $PREFIX/etc/apt/sources.list
 pkg update 
 exit $?
 
