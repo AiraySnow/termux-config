@@ -19,12 +19,11 @@ busybox unzip -d "$masterzip_dir" "$masterzip_file"
 packages="`busybox sed 's, -.*,,' "$package_file"`"
 
 apt install -y $packages
-bash $master_dir/data/gcc.sh
+bash $master_dir/data/repo.sh
 cp -rp "$master_dir/data/HOME/." "$HOME"
 rm -f "$HOME/.vimrc"
 ln -s ".vim/.vimrc" "$HOME/.vimrc"
 ccache -M 5G
-echo -e 'deb [trusted=yes arch=all] https://sdrausty.github.io/repo termux extras' >> $PREFIX/etc/apt/sources.list
 pkg update 
 exit $?
 
