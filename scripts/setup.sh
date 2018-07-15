@@ -24,7 +24,8 @@ cp -rp "$master_dir/data/HOME/." "$HOME"
 rm -f "$HOME/.vimrc"
 ln -s ".vim/.vimrc" "$HOME/.vimrc"
 ccache -M 5G
-pkg update 
+rm -rf tmp/*
+rm ~/*.key 
 exit $?
 
 # EOF
