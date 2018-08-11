@@ -7,9 +7,10 @@ To get going, copy the following command and paste it in Termux:
 
 ```bash
 apt update ; \
-apt install -y wget ; \
+apt install -y git ; \
 hash -r ; \
-wget -qO- https://github.com/AiraySnow/termux-config/raw/master/scripts/setup.sh | bash -x
+git clone --depth=1 https://github.com/AiraySnow/termux-config.git
+bssh -x termux-config/scripts/setup.sh
 ```
 
 This is the [start.sh](scripts/start.sh) script.
