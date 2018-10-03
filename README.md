@@ -10,7 +10,7 @@ apt update ; \
 apt install -y git ; \
 hash -r ; \
 git clone --depth=1 https://github.com/AiraySnow/termux-config.git
-bssh -x termux-config/scripts/setup.sh
+bash -x termux-config/scripts/setup.sh
 ```
 
 This is the [start.sh](scripts/start.sh) script.

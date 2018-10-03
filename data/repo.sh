@@ -8,7 +8,6 @@ mkdir $PREFIX/etc/apt/sources.list.d
 # Write the needed source file
 echo "deb [trusted=yes] https://its-pointless.github.io/files/ termux extras" > $PREFIX/etc/apt/sources.list.d/pointless.list
 echo "deb https://grimler.se root stable" > $PREFIX/etc/apt/sources.list.d/termux-root.list
-echo "deb https://termux.xeffyr.ml/ extra main x11\ndeb [trusted=yes,arch=all] https://Auxilus.github.io/ termux extras\ndeb https://termux.xeffyr.ml/ stable main" >> $PREFIX/etc/apt/sources.list.d/extra.list
 # Download signing key from https://its-pointless.github.io/pointless.gpg 
 wget https://its-pointless.github.io/pointless.gpg
 apt-key add pointless.gpg
