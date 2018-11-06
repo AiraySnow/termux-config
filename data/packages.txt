@@ -60,3 +60,5 @@ ccache
 ncurses-utils
 termux-exec
 dpkg-dev
+root-repo
+x11-repo
