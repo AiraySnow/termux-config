@@ -62,3 +62,7 @@ termux-exec
 dpkg-dev
 root-repo
 x11-repo
+unstable-repo
+autoconf
+automake
+clang

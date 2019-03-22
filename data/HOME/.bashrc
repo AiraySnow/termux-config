@@ -1,4 +1,4 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
+# ~/bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
@@ -90,6 +90,12 @@ if ! shopt -oq posix; then
   elif [ -f $PREFIX/etc/bash_completion ]; then
     . $PREFIX/etc/bash_completion
   fi
+fi
+export USE_CCACHE=1
+export THEME=$HOME/.bash/themes/agnoster-bash/agnoster.bash
+if [[ -f $THEME ]]; then
+    export DEFAULT_USER=`whoami`
+    source $THEME
 fi
 
 # EOF
